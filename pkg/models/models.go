@@ -17,7 +17,7 @@ type Book struct {
 
 var db *gorm.DB
 
-func Init() {
+func init() {
 	fmt.Println("inside models")
 	db = configs.Connect()
 	fmt.Println("Connected to database")
