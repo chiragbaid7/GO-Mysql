@@ -5,7 +5,6 @@ import (
 	"log"
 	"net/http"
 
-	_ "github.com/chiragbaid7/GO-Mysql/pkg/models"
 	// "github.com/chiragbaid7/GO-Mysql/pkg/routes"
 	"github.com/gorilla/mux"
 )
