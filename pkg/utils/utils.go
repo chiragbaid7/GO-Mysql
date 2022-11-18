@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"encoding/json"
 	"net/http"
 )
 
@@ -11,9 +10,7 @@ type Book struct {
 	Book   string `json:"book"`
 }
 
-func ParseBody(r *http.Request) *Book {
+func ParseBody(r *http.Request, book *Book) {
 	//create a decoding pipeline
-	var book *Book
-	json.NewDecoder(r.Body).Decode(&book)
-	return book
+	//decode expects a pointer
 }

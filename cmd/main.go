@@ -4,8 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	_ "github.com/chiragbaid7/GO-Mysql/pkg/models"
-	// "github.com/chiragbaid7/GO-Mysql/pkg/routes"
+	"github.com/chiragbaid7/GO-Mysql/pkg/routes"
 	"github.com/gorilla/mux"
 )
 
@@ -15,6 +14,6 @@ func main() {
 		registers routes and controller/handler fn
 	*/
 	router := mux.NewRouter()
-	// routes.BooksStoreRoutes(router)
+	routes.BooksStoreRoutes(router)
 	log.Fatal(http.ListenAndServe(":8080", router))
 }

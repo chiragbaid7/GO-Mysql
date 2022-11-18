@@ -9,5 +9,5 @@ func BooksStoreRoutes(router *mux.Router) {
 	router.HandleFunc("/", controller.GetBooks).Methods("GET")
 	router.HandleFunc("/{id}", controller.GetBook).Methods("GET")
 	router.HandleFunc("/", controller.CreateBook).Methods("POST")
-	router.HandleFunc("/", controller.DeleteBook).Methods("DELETE")
+	router.HandleFunc("/{id}", controller.DeleteBook).Methods("DELETE")
 }
